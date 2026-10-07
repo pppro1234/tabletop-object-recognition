@@ -1,0 +1,41 @@
+%YAML:1.0
+run_name: "default"
+labels: [ "cube", "cylinder", "sphere", "cone", "pyramid" ]
+input:
+  mode: "batch_images"
+  webcam_index: 0
+  image_dir: "../data/samples"
+  image_glob: "*.jpg"
+preprocess:
+  blur_kernel_size: 5
+  saturation_weight: 2
+segmentation:
+  threshold_offset: 0
+  kmeans_iterations: 15
+  sampling_stride: 4
+morphology:
+  kernel_size: 5
+  open_iterations: 1
+  close_iterations: 1
+region:
+  min_area: 500
+  max_regions: 5
+  reject_boundary: 1
+classification:
+  unknown_threshold: 4.0
+storage:
+  database_path: "../data/db/vision.sqlite3"
+  sample_image_dir: "../data/samples/captured"
+tracking:
+  max_match_distance: 80.0
+rendering:
+  draw_debug_views: 1
+  draw_labels: 1
+evaluation:
+  manifest_path: "../data/db/eval_manifest.csv"
+  output_path: "../data/db/eval_results.csv"
+observability:
+  artifact_root: "../artifacts"
+  save_failure_samples: 1
+  save_config_snapshot: 1
+  log_per_frame: 1

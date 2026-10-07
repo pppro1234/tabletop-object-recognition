@@ -1,0 +1,6 @@
+sample_id,image,label,split,group_id,sha256
+sample_01,../../sample_01_input.jpg,camera,test,unknown,3556c304ec5e77d77f0553d2851bb8d0abb53c58bb67740c65ca0f2f85c36540
+sample_02,../../sample_02_input.jpg,headphone,test,unknown,583c06f1c6898857bdb9f66777cd51d175bc7ba6df440418f7c2ab451ff4ce9f
+sample_03,../../sample_03_input.jpg,battery,test,unknown,4c37300d3b077ac65aab083e80f8f69f7922d10f60f26eda6f3caac3680feea6
+sample_04,../../sample_04_input.jpg,chopstick,test,unknown,50af3d6d9067e531b645af3e667cf00fc0deb9d27ea7caa424d3bec222ca9c0d
+sample_05,../../sample_05_input.jpg,coin,test,unknown,577fca1e0c49c3eb206b8632b4cd8aa7fc0e6207a4ebe7c3a70d83885af1ecec

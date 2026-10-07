@@ -1,0 +1,5 @@
+image,label
+eval/plate_eval_a.ppm,plate
+eval/plate_eval_b.ppm,plate
+eval/rod_eval_a.ppm,rod
+eval/rod_eval_b.ppm,rod

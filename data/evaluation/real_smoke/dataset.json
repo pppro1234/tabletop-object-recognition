@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "tabletop-object-recognition-smoke-v1",
+  "purpose": "smoke",
+  "manifest": "samples.csv",
+  "annotation_status": "owner_verified",
+  "annotation_review_date": "2026-09-22",
+  "annotation_notes": "The data owner confirmed camera, headphone, camera battery, chopsticks, and coin for images 01 through 05. Historical class identifiers are retained.",
+  "training": {
+    "kind": "legacy_features",
+    "path": "training_features.csv",
+    "sha256": "f909fd88334ac1dd7e6643ece3dee9c848009daa3072fd5546a95ba1828af8f3",
+    "source": "data/object_db.csv",
+    "provenance": "Historical shape4d feature snapshot; original capture identities and timestamps are unavailable."
+  },
+  "limitations": [
+    "Only five images are available, with one image per class. This is a smoke check, not a representative benchmark.",
+    "Training-vector provenance is incomplete; overlap with evaluation captures cannot be ruled out. Independence is not claimed.",
+    "The fixed training vectors were computed by the legacy pipeline; they have matching shape4d fields but are not newly extracted by the current pipeline.",
+    "Only original input images are evaluated. Threshold, region, overlay, and crop derivatives are excluded.",
+    "The evaluator scores the primary detected region per image. Multi-object detection and tracking quality are outside this dataset scope.",
+    "Pipeline timing includes rendering and excludes image decoding and artifact writes. Five samples cannot support stable tail-latency claims."
+  ]
+}
